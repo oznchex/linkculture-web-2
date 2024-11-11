@@ -10,10 +10,10 @@ export default function HomeHeader() {
 
   return (
     <header className="sticky top-0 z-10 bg-white">
-      <div className="flex w-full items-center h-14 px-4">
+      <div className="flex w-full items-center h-14 px-4 pt-1.5">
         <Link href="/home" className="flex items-center w-10 h-10 justify-center">
           <Image
-            src="/logo.png"
+            src="/assets/header/logo.svg"
             alt="링컬처 로고"
             width={28}
             height={28}
@@ -25,7 +25,7 @@ export default function HomeHeader() {
           <div className="relative flex items-center w-full">
             <div className="absolute left-4 w-5 h-5 flex items-center justify-center">
               <Image
-                src="/assets/header/search.png"
+                src="/assets/header/search.svg"
                 alt="검색"
                 width={20}
                 height={20}
@@ -45,7 +45,7 @@ export default function HomeHeader() {
             onClick={() => setIsModalOpen(true)}
           >
             <Image
-              src="/assets/header/bell.png"
+              src="/assets/header/bell.svg"
               alt="알림"
               width={24}
               height={24}
@@ -61,7 +61,7 @@ export default function HomeHeader() {
               alt="메뉴"
               width={24}
               height={24}
-              className="w-6 h-6"
+              className="w-7 h-7"
             />
           </button>
         </div>
