@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* 모든 입력 요소에 대해 스핀 버튼을 숨김 */
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* 기본 컨텐츠 컨테이너 스타일 */
+.content-container {
+  @apply mx-auto w-full;
+  max-width: 1920px; /* 최대 폭 설정 */
+}
+
+/* 사용자의 색상 모드가 밝은 모드일 때의 색상 설정 */
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-feature-settings: 'clig' 0, 'liga' 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 5rem);
+}
+
+/* 유틸리티 레이어에 추가적인 유틸리티 클래스 추가 */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* 노트북에서 앱 모드 시연을 위해 최대 너비 제한 */
+@media (min-width: 640px) {
+  .content-container {
+    max-width: 375px; /* iPhone 6/7/8 크기로 설정 */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out;
+  }
+}
+
+@supports(padding: max(0px)) {
+  .safe-area-inset-top {
+    padding-top: max(env(safe-area-inset-top), 16px);
+  }
+  .safe-area-inset-bottom {
+    padding-bottom: max(env(safe-area-inset-bottom), 16px);
+  }
+}
+
+.react-datepicker {
+  width: 100%;
+  border: none !important;
+  font-family: inherit !important;
+}
+
+.react-datepicker__month-container {
+  width: 100%;
+}
+
+.react-datepicker__month {
+  padding: 0.4rem 0;
+}
+
+.react-datepicker__day {
+  width: 2.5rem;
+  line-height: 2.5rem;
+  margin: 0.2rem;
+}
+
+.react-datepicker__day--selected {
+  background-color: #3b82f6 !important;
+  border-radius: 50% !important;
+}
+
+.react-datepicker__day:hover {
+  border-radius: 50%;
+}
+
+.react-datepicker__day-name {
+  width: 2.5rem;
+  line-height: 2.5rem;
+  margin: 0.2rem;
+}
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.react-calendar__month-view__days {
+  gap: 8px !important;
+  padding: 8px !important;
+}
+
+.react-calendar__tile {
+  height: 48px !important;
+  padding: 0 !important;
+  font-size: 1.1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.react-calendar__navigation button {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+} 
