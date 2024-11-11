@@ -100,7 +100,7 @@ export default function HomeBody() {
                   index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <div className="absolute top-[13%] left-4 z-10">
+                <div className="absolute top-[8%] left-6 z-10">
                   <div className={`${
                     image.congestion.type === 'high' ? 'bg-pink-100 text-pink-600' :
                     image.congestion.type === 'medium' ? 'bg-yellow-100 text-yellow-600' :
