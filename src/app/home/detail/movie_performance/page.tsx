@@ -8,7 +8,6 @@ import HomeFooter from '@/components/home/HomeFooter';
 export default function HomeDetailPage() {
   return (
     <>
-      <HomeHeader />
       <main className="flex-1 overflow-hidden flex flex-col">
         <HomeMovieDetail />
       </main>

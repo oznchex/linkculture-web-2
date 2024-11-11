@@ -1,14 +1,15 @@
-`use client`
-
-import HomeHeader from '@/components/home/HomeHeader';
+import BackButton from '@/components/common/button/BackButton2';
 import HomeDetailBody from '@/components/home/detail/HomeDetail';
 import HomeFooter from '@/components/home/HomeFooter';
-
 
 export default function HomeDetailPage() {
   return (
     <>
-      <HomeHeader />
+      <header className="sticky top-0 z-10 bg-white">
+        <div className="flex items-center h-12 px-4">
+          <BackButton />
+        </div>
+      </header>
       <main className="flex-1 overflow-hidden flex flex-col">
         <HomeDetailBody />
       </main>
