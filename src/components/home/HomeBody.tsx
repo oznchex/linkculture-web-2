@@ -34,7 +34,7 @@ export default function HomeBody() {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === bannerImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // 6초마다 이미지 변경
+    }, 5000); // 6초마다 이미지 변경
 
     return () => clearInterval(timer);
   }, [bannerImages.length]);
@@ -91,9 +91,15 @@ export default function HomeBody() {
       {/* 메인 컨텐츠 카드 */}
       <div className="bg-white rounded-2xl overflow-hidden flex-1 relative px-4 pt-4 pb-3">
         <div className="h-full flex flex-col">
+          {/* 메인 컨텐츠 카드 내부의 이미지 섹션 */}
           <div className="relative flex-1 min-h-0 rounded-xl overflow-hidden">
             {bannerImages.map((image, index) => (
-              <div key={index} className="relative w-full h-full">
+              <div 
+                key={index} 
+                className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
                 <div className="absolute top-[13%] left-4 z-10">
                   <div className={`${
                     image.congestion.type === 'high' ? 'bg-pink-100 text-pink-600' :
@@ -115,9 +121,7 @@ export default function HomeBody() {
                   fill
                   sizes="(max-width: 768px) 100vw, 768px"
                   priority={index === 0}
-                  className={`object-contain transition-opacity duration-500 ${
-                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className="object-contain"
                 />
               </div>
             ))}
