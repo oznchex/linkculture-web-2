@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function HomeDetail() {
+export default function HomeSportsDetail() {
   const router = useRouter();
   const days = ['일', '월', '화', '수', '목', '금', '토'];
   const [selectedDay, setSelectedDay] = useState('수');
@@ -18,7 +18,7 @@ export default function HomeDetail() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="p-4 flex-none">
+      <div className="px-4 flex-none">
         <header className="mb-6">
           <h1 className="text-xl font-bold mb-2">
           체육·경기에 해당되는 추천 컨텐츠에요!
@@ -28,7 +28,7 @@ export default function HomeDetail() {
           </p>
         </header>
 
-        <div className="flex justify-between mb-6 border-y py-3">
+        <div className="flex justify-between border-y py-3">
           {days.map((day, index) => (
             <div 
               key={index}
