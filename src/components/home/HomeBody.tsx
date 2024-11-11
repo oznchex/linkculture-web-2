@@ -89,7 +89,7 @@ export default function HomeBody() {
       </div>
 
       {/* 메인 컨텐츠 카드 */}
-      <div className="bg-white rounded-2xl overflow-hidden flex-1 relative px-4 pt-4 pb-3">
+      <div className="bg-white rounded-2xl overflow-hidden flex-1 relative pt-4 pb-3">
         <div className="h-full flex flex-col">
           {/* 메인 컨텐츠 카드 내부의 이미지 섹션 */}
           <div className="relative flex-1 min-h-0 rounded-xl overflow-hidden">
@@ -127,7 +127,7 @@ export default function HomeBody() {
             ))}
           </div>
           
-          <div className="mt-2 px-1">
+          <div className="mt-2">
             <h2 className="text-22px font-bold mb-1">오늘 회원님에게 추천하는 컨텐츠에요!</h2>
             <p className="text-gray-600 text-sm mb-2">
               현재 김대중컨벤션센터에서 2024년 대한민국 정부 박람회가 열리고 있어요! 이외에도 광주비엔날레가..
