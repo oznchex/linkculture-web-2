@@ -2,58 +2,75 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import SimpleModal from '../common/modal/SimpleModal';
 
 export default function HomeHeader() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div className="h-[8%] flex flex-col w-full items-center pb-2 pl-2 shadow-sm mt-2">
-        <div className="flex w-full items-center justify-between px-2 h-[72px]">
-        <Link href="/home" className="flex items-center">
+    <header className="sticky top-0 z-10 bg-white">
+      <div className="flex w-full items-center h-14 px-4">
+        <Link href="/home" className="flex items-center w-10 h-10 justify-center">
           <Image
             src="/logo.png"
             alt="링컬처 로고"
-            width={24}
-            height={24}
+            width={28}
+            height={28}
+            className="w-7 h-7"
           />
         </Link>
         {/* Search Bar */}
-        <div className="flex-1 mx-3">
-          <div className="relative flex items-center">
-            <div className="absolute left-4">
+        <div className="flex-1 min-w-0 mx-3">
+          <div className="relative flex items-center w-full">
+            <div className="absolute left-4 w-5 h-5 flex items-center justify-center">
               <Image
                 src="/assets/header/search.png"
                 alt="검색"
                 width={20}
                 height={20}
+                className="w-5 h-5"
               />
             </div>
-            <input
-              type="text"
-              placeholder="보고싶은 전시를 검색해보세요!"
-              className="w-full h-[48px] pl-12 pr-4 rounded-full bg-gray-50 border border-gray-100 text-sm placeholder-gray-400 focus:outline-none focus:border-blue60 focus:ring-1 focus:ring-blue60"
-            />
+            <div className="w-full h-11 pl-12 pr-4 rounded-full bg-gray-50 border border-gray-100 text-sm text-gray-400 flex items-center">
+              <span className="truncate min-w-0">전시를 검색해보세요</span>
+            </div>
           </div>
         </div>
 
         {/* Right Icons */}
-        <div className="flex items-center gap-4">
-          <button className="p-2">
+        <div className="flex items-center gap-2">
+          <button 
+            className="w-10 h-10 flex items-center justify-center"
+            onClick={() => setIsModalOpen(true)}
+          >
             <Image
               src="/assets/header/bell.png"
               alt="알림"
-              width={20}
-              height={20}
+              width={24}
+              height={24}
+              className="w-6 h-6"
             />
           </button>
-          <button className="p-2">
+          <button 
+            className="w-10 h-10 flex items-center justify-center"
+            onClick={() => setIsModalOpen(true)}
+          >
             <Image
               src="/assets/header/menu.svg"
               alt="메뉴"
-              width={20}
-              height={20}
+              width={24}
+              height={24}
+              className="w-6 h-6"
             />
           </button>
         </div>
-        </div>
-    </div>
+      </div>
+
+      <SimpleModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </header>
   );
 }

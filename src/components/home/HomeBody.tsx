@@ -34,7 +34,7 @@ export default function HomeBody() {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === bannerImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // 6초마다 이미지 변경
+    }, 3500); // 6초마다 이미지 변경
 
     return () => clearInterval(timer);
   }, [bannerImages.length]);
