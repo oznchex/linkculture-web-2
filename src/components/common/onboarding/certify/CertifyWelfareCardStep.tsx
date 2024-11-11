@@ -126,7 +126,7 @@ export default function CertifyWelfareCardStep({ onNext, onBack, onManualInput }
       {isModalOpen && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title="촬영하기는 준비 중이에요!">
           <div className="text-center">
-            <p className="text-gray-600 max-[320px]:whitespace-pre-line">
+            <p className="text-gray-600 whitespace-pre-line">
               {'인증을 원할 경우\n직접 입력으로 진행해 주세요.'}
             </p>
           </div>
