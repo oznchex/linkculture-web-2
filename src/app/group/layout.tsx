@@ -1,4 +1,4 @@
-export default function ScrapLayout({
+export default function GroupLayout({
     children,
   }: {
     children: React.ReactNode

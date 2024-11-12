@@ -8,7 +8,7 @@ import HomeFooter from '@/components/home/HomeFooter';
 export default function HomeDetailPage() {
   return (
     <>
-          <header className="sticky top-0 z-10 bg-white">
+        <header className="sticky top-0 z-10 bg-white">
         <div className="flex items-center h-12 px-4">
           <BackButton />
         </div>

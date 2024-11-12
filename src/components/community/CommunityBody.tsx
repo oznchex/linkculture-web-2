@@ -13,7 +13,7 @@ const posts = [
   {
     id: 1,
     author: 'fidzjfcj',
-    content: '수어 해설이 제공되는 전시 찾고 있는데, 서울아나 근교에...',
+    content: '수어 해설이 제공되는 전시 찾고 있는데, 서울이나 근교에...',
     time: '09/25 8:41 PM',
     image: null
   },
@@ -78,10 +78,10 @@ export default function CommunityBody() {
   };
 
   return (
-    <div className="flex-1 overflow-y-auto">
+    <div className="h-full container mx-auto flex flex-col">
       {/* 필터 태그 */}
-      <div className="px-4 py-3">
-        <div className="max-w-screen-md mx-auto flex justify-between">
+      <div className="px-4 py-3 w-full">
+        <div className="flex gap-2 items-center w-full">
           {filterTags.map((tag) => (
             <button
               key={tag.id}
@@ -98,8 +98,8 @@ export default function CommunityBody() {
         </div>
       </div>
 
-      {/* 게시물 목록 */}
-      <div className="divide-y">
+      {/* 게시물 목록 - flex-1을 여기에 적용 */}
+      <div className="flex-1 overflow-y-auto divide-y">
         {posts.map((post) => (
           <div key={post.id} className="px-4 py-3">
             <div className="flex justify-between items-start">
