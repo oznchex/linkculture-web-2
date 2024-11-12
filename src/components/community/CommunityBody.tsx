@@ -90,18 +90,21 @@ export default function CommunityBody() {
     <div className="h-full container mx-auto flex flex-col">
       {/* 필터 태그 */}
       <div className="px-4 py-3 w-full">
-        <div className="flex gap-2 items-center w-full">
+        <div className="flex gap-2 items-center justify-center w-full">
           {filterTags.map((tag) => (
             <button
               key={tag.id}
               onClick={() => toggleFilter(tag.id)}
-              className={`px-4 py-1.5 rounded-full text-[9px] border
+              className={`
+                px-3 py-1 rounded-full border border-[#4374D9] text-[12px]
+                transition-all duration-200
                 ${tag.selected 
-                  ? 'border-blue-500 text-blue-500' 
-                  : 'border-gray-200 text-gray-600'
-                }`}
+                  ? 'bg-[#E8F0FF] text-[#4374D9]' 
+                  : 'bg-white border-gray-500 text-gray-600 hover:bg-gray-50'
+                }
+              `}
             >
-              {tag.label}
+              {tag.label} {tag.selected && '×'}
             </button>
           ))}
         </div>
@@ -117,9 +120,9 @@ export default function CommunityBody() {
           >
             <div className="flex justify-between items-start">
               <div className="flex-1">
-                <h3 className="text-[12px] text-bold mb-1">{post.author}</h3>
-                <p className="text-gray-600 text-[10px] mb-2">{post.content}</p>
-                <span className="text-gray-400 text-[8px]">{post.time}</span>
+                <h3 className="text-[15px] text-bold mb-1">{post.author}</h3>
+                <p className="text-gray-600 text-[13px] mb-2">{post.content}</p>
+                <span className="text-gray-400 text-[11px]">{post.time}</span>
               </div>
               {post.image && (
                 <div className="ml-3 w-16 h-16 relative rounded-lg overflow-hidden">

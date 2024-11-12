@@ -2295,7 +2295,7 @@ const MapBody = ({
         <FilterButtons/>
       </div>
       {/* 지도 영역 - 고정 */}
-      <div className="relative h-[420px]">
+      <div className="relative h-[420px] sm:h-[360px] md:h-[300px] lg:h-[420px]">
         <div 
           id="map" 
           className="h-full w-full"
@@ -2307,7 +2307,7 @@ const MapBody = ({
         {/* 제목 - 고정 */}
         <div className="shrink-0 px-5 py-2 bg-white sticky top-0 z-10">
           <h2 className="text-[0.92644rem] font-bold text-[#5B5B5B] font-pretendard leading-[137.023%]">
-            217개의 배리어프리 장소
+            217개의 광주 배리어프리 장소
           </h2>
           <p className="text-[0.8rem] text-gray-400">
             한국문화정보원_전국 배리어프리 문화예술관광지 공공데이터
@@ -2345,7 +2345,7 @@ const MapBody = ({
     time: '', // Provide a default or actual value
     image: selectedPlace.image
   } : null}
-  message="현재 시설 세부 정보를 등록하고 있어요!" // Pass the message as a prop
+  message="현재 배리어프리 시설 세부 정보를 등록하고 있어요!" // Pass the message as a prop
 />
     </div>
   );
