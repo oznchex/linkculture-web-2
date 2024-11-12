@@ -15,6 +15,7 @@ const meetups = [
     id: 1,
     label: '행사',
     title: '대한민국 정부박람회 같이 가실 분!',
+    location: '광주 서구',
     date: '11/14(목) 오후 14시',
     author: '주주',
     participants: '1/5',
@@ -24,28 +25,31 @@ const meetups = [
     id: 2,
     label: '영화',
     title: '[번개 모임] 오늘 대도시의 사랑법...',
+    location: '광주 동구',
     date: '11/13(수) 오후 18시',
-    author: 'tjdu',
-    participants: '3/6',
+    author: '채채',
+    participants: '3/4',
     image: '/assets/group/big_city_love.png'
   },
   {
     id: 3,
-    label: '전시·공연',
+    label: '전시',
     title: '주말에 전시 관람하러 가실 분 구합...',
-    date: '11/17(일) 오후 10시',
-    author: '이진',
+    location: '광주 북구',
+    date: '11/17(일) 오후 2시',
+    author: '마리',
     participants: '2/3',
     image: '/assets/group/memory_exhibit.png'
   },
   {
     id: 4,
-    label: '전시 관람',
-    title: '주말에 전시 관람하러 가실 분 구함',
-    date: '11/17(일) 오후 10시',
-    author: '이진',
-    participants: '2/3',
-    image: '/assets/group/memory_exhibit.png'
+    label: '스포츠',
+    title: '주말에 게이트볼 함께 치실 분을 찾습니다.',
+    location: '광주 남구',
+    date: '11/17(일) 오전 10시',
+    author: '동동',
+    participants: '2/6',
+    image: '/assets/group/gate_ball.png'
   },
 ];
 
@@ -115,8 +119,8 @@ export default function GroupBody() {
                 
                 {/* Right: Content */}
                 <div className="flex-1">
-                  <div className="bg-[#F8F9FF] rounded-md px-3 py-1 mb-1 w-fit">
-                    <span className="text-[10px] text-blue-600">
+                  <div className="bg-[#D3E1FE] rounded-md px-2 py-1 mb-1 w-fit flex items-center">
+                    <span className="text-[10px] text-center text-blue-600">
                       {meetup.label}
                     </span>
                   </div>
