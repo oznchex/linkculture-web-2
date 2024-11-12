@@ -12,6 +12,7 @@ export default function Home() {
   };
 
   return (
+    <div className="flex flex-col h-[100dvh]">
     <div className="flex flex-col items-center justify-between h-full">
       <div className="flex flex-col items-center justify-between h-full w-full">
         <div className="flex-1 flex flex-col items-center justify-center gap-4">
@@ -52,6 +53,7 @@ export default function Home() {
           </RoutingButton>
         </div>
       </div>
+    </div>
     </div>
   )
 }
