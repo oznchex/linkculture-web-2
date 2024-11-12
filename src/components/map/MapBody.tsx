@@ -12,6 +12,15 @@ interface MapBodyProps {
   zoom?: number;
 }
 
+type PlaceType = {
+  id: number;
+  name: string;
+  category: string;
+  label: '관광' | '공연' | '전시' | '운동' | '숙소' | '연극';
+  image: string;
+  position: { lat: number; lng: number };
+};
+
 const MapBody = ({
   width = '100%',
   height = '308px',
@@ -21,23 +30,50 @@ const MapBody = ({
   },
   zoom = 15,
 }: MapBodyProps) => {
-  const places = useMemo(() => [
+  const places: PlaceType[] = useMemo(() => [
     {
       id: 1,
       name: "접속하는 몸: 아시아 여성 미술가들",
       category: "[배리어프리 전시]",
+      label: '전시',
       image: "/assets/map/barrier_free_art.png",
-      position: { lat: 35.146925, lng: 126.840462 }
+      position: { lat: 35.183139, lng: 126.885709 }
     },
     {
       id: 2,
-      name: "종로구 체육 시설",
+      name: "광주 서구 체육 시설",
       category: "[스포츠강좌이용권 사용]",
+      label: '전시',
       image: "/assets/map/jonglo_sports.png",
       position: { lat: 35.146925, lng: 126.840462 }
     },
-    // ... 더 많은 장소 데이터
-  ], []); // Empty dependency array since this data is static
+    {
+      id: 3,
+      name: "국립아시아문화전당",
+      category: "[스포츠강좌이용권 사용]",
+      label: '전시',
+      image: "/assets/map/jonglo_sports.png",
+      position: { lat: 35.146781, lng: 126.920251 }
+    },
+    {
+      id: 4,
+      name: "풀잎문화센터 서광주지부",
+      category: "[스포츠강좌이용권 사용]",
+      label: '운동',
+      image: "/assets/map/jonglo_sports.png",
+      position: { lat: 35.144653, lng: 126.841715 }
+    },
+  ], []);
+
+
+  const markerIcons = useMemo(() => ({
+    관광: '/assets/map/markers/tourism-marker.png',
+    공연: '/assets/map/markers/concert-marker.png',
+    전시: '/assets/map/markers/exhibition-marker.png',
+    운동: '/assets/map/markers/sports-marker.png',
+    숙소: '/assets/map/markers/accommodation-marker.png',
+    연극: '/assets/map/markers/performance-marker.png'
+  }), []);
 
   useEffect(() => {
     const initializeMap = () => {
@@ -48,11 +84,24 @@ const MapBody = ({
 
       const map = new window.naver.maps.Map('map', mapOptions);
       
-      // 각 장소마다 마커 생성
       places.forEach(place => {
-        new window.naver.maps.Marker({
+        console.log('Marker URL:', markerIcons[place.label]);
+
+        const marker = new window.naver.maps.Marker({
           position: new window.naver.maps.LatLng(place.position.lat, place.position.lng),
-          map: map
+          map: map,
+          icon: {
+            url: markerIcons[place.label],
+            size: new window.naver.maps.Size(48, 64),
+            scaledSize: new window.naver.maps.Size(48, 64),
+            origin: new window.naver.maps.Point(0, 0),
+            anchor: new window.naver.maps.Point(24, 64),
+          }
+        });
+
+        // 마커 클릭 이벤트 추가
+        window.naver.maps.Event.addListener(marker, 'click', () => {
+          console.log(`Clicked: ${place.name}`);
         });
       });
     };
@@ -66,7 +115,7 @@ const MapBody = ({
     }, 100);
 
     return () => clearInterval(interval);
-  }, [initialCenter.lat, initialCenter.lng, zoom, places]);
+  }, [initialCenter.lat, initialCenter.lng, zoom, places, markerIcons]);
 
   return (
     <div className="h-full flex flex-col">

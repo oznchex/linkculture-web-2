@@ -56,6 +56,7 @@ export default function HomeFooter() {
       <SimpleModal 
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+        post={null}
       />
     </div>
   );

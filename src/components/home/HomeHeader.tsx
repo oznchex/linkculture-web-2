@@ -70,6 +70,7 @@ export default function HomeHeader() {
       <SimpleModal 
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+        post={null}
       />
     </header>
   );

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import SimpleModal from '@/components/common/modal/SimpleModal';
 
 interface FilterTag {
   id: string;
@@ -77,6 +78,14 @@ export default function CommunityBody() {
     ));
   };
 
+  const [selectedPost, setSelectedPost] = useState<typeof posts[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handlePostClick = (post: typeof posts[0]) => {
+    setSelectedPost(post);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="h-full container mx-auto flex flex-col">
       {/* 필터 태그 */}
@@ -86,7 +95,7 @@ export default function CommunityBody() {
             <button
               key={tag.id}
               onClick={() => toggleFilter(tag.id)}
-              className={`px-4 py-1.5 rounded-full text-sm border
+              className={`px-4 py-1.5 rounded-full text-[9px] border
                 ${tag.selected 
                   ? 'border-blue-500 text-blue-500' 
                   : 'border-gray-200 text-gray-600'
@@ -101,12 +110,16 @@ export default function CommunityBody() {
       {/* 게시물 목록 - flex-1을 여기에 적용 */}
       <div className="flex-1 overflow-y-auto divide-y">
         {posts.map((post) => (
-          <div key={post.id} className="px-4 py-3">
+          <div 
+            key={post.id} 
+            className="px-4 py-3 cursor-pointer hover:bg-gray-50"
+            onClick={() => handlePostClick(post)}
+          >
             <div className="flex justify-between items-start">
               <div className="flex-1">
-                <h3 className="font-medium mb-1">{post.author}</h3>
-                <p className="text-gray-600 text-sm mb-2">{post.content}</p>
-                <span className="text-gray-400 text-xs">{post.time}</span>
+                <h3 className="text-[12px] text-bold mb-1">{post.author}</h3>
+                <p className="text-gray-600 text-[10px] mb-2">{post.content}</p>
+                <span className="text-gray-400 text-[8px]">{post.time}</span>
               </div>
               {post.image && (
                 <div className="ml-3 w-16 h-16 relative rounded-lg overflow-hidden">
@@ -122,6 +135,11 @@ export default function CommunityBody() {
           </div>
         ))}
       </div>
+      <SimpleModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        post={selectedPost}
+      />
     </div>
   );
 } 
