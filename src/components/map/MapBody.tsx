@@ -31,8 +31,8 @@ const MapBody = ({
     },
     {
       id: 2,
-      name: "[스포츠강좌이용권 사용]",
-      category: "전시",
+      name: "종로구 체육 시설",
+      category: "[스포츠강좌이용권 사용]",
       image: "/assets/map/jonglo_sports.png",
       position: { lat: 35.146925, lng: 126.840462 }
     },
@@ -70,7 +70,9 @@ const MapBody = ({
 
   return (
     <div className="h-full flex flex-col">
-      <FilterButtons />
+      <div className="flex justify-center items-center">
+        <FilterButtons/>
+      </div>
       {/* 지도 영역 - 고정 */}
       <div className="relative h-[420px]">
         <div 
