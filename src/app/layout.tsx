@@ -1,6 +1,7 @@
 // app/layout.tsx
 
 import { Metadata } from 'next'
+import Script from 'next/script';
 import localFont from 'next/font/local'
 import { ReservationProvider } from '@/context/ReservationContext';
 
@@ -46,6 +47,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        <Script
+        strategy="afterInteractive" //"beforeInteractive"으로 찾았는데 경고메세지 떠가지고 after로 수정해줬습니다. 
+        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
+        ></Script>
+      </head>
       <body className="font-pretendard bg-[#fff] flex items-center justify-center min-h-[100dvh]">
         <div className="bg-[#F4F6FA] w-full h-[100dvh] flex items-center justify-center">
           <div className="w-full h-full max-w-[430px] bg-white overflow-y-auto relative mx-auto">
