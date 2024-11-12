@@ -17,7 +17,7 @@ type PlaceType = {
   id: number;
   name: string;
   category: string;
-  label: '관광' | '공연' | '전시' | '운동' | '숙소' | '연극' | '관광';
+  label: '관광' | '공연' | '전시' | '운동' | '숙소' | '연극';
   image: string;
   position: { lat: number; lng: number };
 };
@@ -58,7 +58,7 @@ const MapBody = ({
         "id": 3,
         "name": "5.18기념문화회관민주홀",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.15830536,
@@ -91,7 +91,7 @@ const MapBody = ({
         "id": 6,
         "name": "가나엔터프라이즈",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.15071637,
@@ -157,7 +157,7 @@ const MapBody = ({
         "id": 12,
         "name": "고싸움놀이테마파크고싸움전수관",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.06974381,
@@ -179,7 +179,7 @@ const MapBody = ({
         "id": 14,
         "name": "공연일번지",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14923542,
@@ -190,7 +190,7 @@ const MapBody = ({
         "id": 15,
         "name": "공항화랑",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.13938862,
@@ -212,7 +212,7 @@ const MapBody = ({
         "id": 17,
         "name": "광산농악전수관",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.19123284,
@@ -223,7 +223,7 @@ const MapBody = ({
         "id": 18,
         "name": "광산온에어행복오네요",
           "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14050104,
@@ -245,7 +245,7 @@ const MapBody = ({
         "id": 20,
         "name": "광주광역시문화원연합회",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.13364608,
@@ -300,7 +300,7 @@ const MapBody = ({
         "id": 25,
         "name": "광주김치타운",
         "category": "",
-        "label": "전시",
+        "label": "연극",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.10966818,
@@ -322,7 +322,7 @@ const MapBody = ({
         "id": 27,
         "name": "광주도예원센터",
         "category": "",
-        "label": "전시",
+        "label": "연극",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.12386228,
@@ -355,7 +355,7 @@ const MapBody = ({
         "id": 30,
         "name": "광주명장의전당",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14677706,
@@ -377,7 +377,7 @@ const MapBody = ({
         "id": 32,
         "name": "광주문화예술회관",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.17820945,
@@ -421,7 +421,7 @@ const MapBody = ({
         "id": 36,
         "name": "광주서구복합커뮤니티센터",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.13046639,
@@ -465,7 +465,7 @@ const MapBody = ({
         "id": 40,
         "name": "광주아트홀",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14697472,
@@ -476,7 +476,7 @@ const MapBody = ({
         "id": 41,
         "name": "광주야외음악당",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.16009941,
@@ -509,7 +509,7 @@ const MapBody = ({
         "id": 44,
         "name": "광주여성문화회관",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.1533934,
@@ -553,7 +553,7 @@ const MapBody = ({
         "id": 48,
         "name": "광주음악산업진흥센터",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.1426119,
@@ -564,7 +564,7 @@ const MapBody = ({
         "id": 49,
         "name": "광주정보문화산업진흥원",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14827453,
@@ -575,7 +575,7 @@ const MapBody = ({
         "id": 50,
         "name": "광주클럽네버마인드",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.15282464,
@@ -630,7 +630,7 @@ const MapBody = ({
         "id": 55,
         "name": "광주학생독립운동기념회관",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14058722,
@@ -661,9 +661,9 @@ const MapBody = ({
     },
     {
         "id": 58,
-        "name": "광주ACEFAIR",
+        "name": "광주_ACEFAIR",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14677706,
@@ -696,7 +696,7 @@ const MapBody = ({
         "id": 61,
         "name": "국립5.18민주묘지",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.23576619,
@@ -707,7 +707,7 @@ const MapBody = ({
         "id": 62,
         "name": "국립광주박물관",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.18965658,
@@ -718,7 +718,7 @@ const MapBody = ({
         "id": 63,
         "name": "국립아시아문화전당홍보관",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.1470573,
@@ -762,7 +762,7 @@ const MapBody = ({
         "id": 67,
         "name": "국제문화센터",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.17137127,
@@ -773,7 +773,7 @@ const MapBody = ({
         "id": 68,
         "name": "굿마당",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.22333206,
@@ -784,7 +784,7 @@ const MapBody = ({
         "id": 69,
         "name": "궁동예술극장",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.15009066,
@@ -795,7 +795,7 @@ const MapBody = ({
         "id": 70,
         "name": "궁동예술두레마당",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.15005154,
@@ -839,7 +839,7 @@ const MapBody = ({
         "id": 74,
         "name": "기분좋은극장",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.15491016,
@@ -861,7 +861,7 @@ const MapBody = ({
         "id": 76,
         "name": "김남주기념홀",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.17388133,
@@ -872,7 +872,7 @@ const MapBody = ({
         "id": 77,
         "name": "김냇과3",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.15428758,
@@ -894,7 +894,7 @@ const MapBody = ({
         "id": 79,
         "name": "김대중컨벤션제2전시장",
           "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14953575,
@@ -927,7 +927,7 @@ const MapBody = ({
         "id": 82,
         "name": "남광주풀잎화센터",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.13688772,
@@ -938,7 +938,7 @@ const MapBody = ({
         "id": 83,
         "name": "남구문화원",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.12206372,
@@ -1246,7 +1246,7 @@ const MapBody = ({
         "id": 111,
         "name": "북구문화센터",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.20134343,
@@ -1257,7 +1257,7 @@ const MapBody = ({
         "id": 112,
         "name": "북구문화원",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.17285434,
@@ -1290,7 +1290,7 @@ const MapBody = ({
         "id": 115,
         "name": "빛고을공예창작촌",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.08572261,
@@ -1312,7 +1312,7 @@ const MapBody = ({
         "id": 117,
         "name": "빛고을국악전수관",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.131965,
@@ -1334,7 +1334,7 @@ const MapBody = ({
         "id": 119,
         "name": "빛고을시민문화회관",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14790588,
@@ -1422,7 +1422,7 @@ const MapBody = ({
         "id": 127,
         "name": "서구문화원",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.131965,
@@ -1488,7 +1488,7 @@ const MapBody = ({
         "id": 133,
         "name": "시화문화마을문화관",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.17909256,
@@ -1532,7 +1532,7 @@ const MapBody = ({
         "id": 137,
         "name": "쌍촌청소년문화의집",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.1556736,
@@ -1543,7 +1543,7 @@ const MapBody = ({
         "id": 138,
         "name": "씨디아트홀",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.16901936,
@@ -1598,7 +1598,7 @@ const MapBody = ({
         "id": 143,
         "name": "양동문화센터",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.15390747,
@@ -1697,7 +1697,7 @@ const MapBody = ({
         "id": 152,
         "name": "에콜리안광산CC",
         "category": "",
-        "label": "운동",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.10683964,
@@ -1719,7 +1719,7 @@ const MapBody = ({
         "id": 154,
         "name": "영산강문화관",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.06577435,
@@ -1752,7 +1752,7 @@ const MapBody = ({
         "id": 157,
         "name": "예술극장통",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14808508,
@@ -1796,7 +1796,7 @@ const MapBody = ({
         "id": 161,
         "name": "유니버설문화원",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.16232122,
@@ -1851,7 +1851,7 @@ const MapBody = ({
         "id": 166,
         "name": "이마트문화센터",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.16000626,
@@ -1884,7 +1884,7 @@ const MapBody = ({
         "id": 169,
         "name": "전남대병원문화관",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14287984,
@@ -1906,7 +1906,7 @@ const MapBody = ({
         "id": 171,
         "name": "전통문화관",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.1334851,
@@ -2027,7 +2027,7 @@ const MapBody = ({
         "id": 182,
         "name": "천칭자리",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.15113234,
@@ -2038,7 +2038,7 @@ const MapBody = ({
         "id": 183,
         "name": "첨단겨자씨문화센터",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.21480657,
@@ -2082,7 +2082,7 @@ const MapBody = ({
         "id": 187,
         "name": "청춘극장",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.11071371,
@@ -2093,7 +2093,7 @@ const MapBody = ({
         "id": 188,
         "name": "충장아트홀",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.14729142,
@@ -2115,7 +2115,7 @@ const MapBody = ({
         "id": 190,
         "name": "쿤스트할레광주",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.1470573,
@@ -2137,7 +2137,7 @@ const MapBody = ({
         "id": 192,
         "name": "테마커뮤니케이션",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.16094475,
@@ -2192,7 +2192,7 @@ const MapBody = ({
         "id": 197,
         "name": "하멜아트홀",
         "category": "",
-        "label": "전시",
+        "label": "공연",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.12781183,
@@ -2203,7 +2203,7 @@ const MapBody = ({
         "id": 198,
         "name": "하정웅관",
         "category": "",
-        "label": "전시",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.18323305,
