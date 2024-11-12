@@ -55,7 +55,7 @@ export default function RootLayout({
       </head>
       <body className="font-pretendard bg-[#fff] flex items-center justify-center min-h-[100dvh]">
         <div className="bg-[#F4F6FA] w-full h-[100dvh] flex items-center justify-center">
-          <div className="w-full h-full max-w-[430px] bg-white overflow-y-auto relative mx-auto">
+          <div className="w-full max-w-[430px] bg-white relative mx-auto">
             <ReservationProvider>
               {children}
             </ReservationProvider>

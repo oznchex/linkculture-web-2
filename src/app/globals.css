@@ -33,11 +33,19 @@ input::-webkit-inner-spin-button {
 body {
   color: rgb(var(--foreground-rgb));
   font-feature-settings: 'clig' 0, 'liga' 0;
+  overflow: hidden;
+  height: 100%;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-padding, 5rem);
+  overflow: hidden;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
 
 /* 유틸리티 레이어에 추가적인 유틸리티 클래스 추가 */
