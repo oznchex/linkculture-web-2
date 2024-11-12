@@ -24,23 +24,16 @@ const MapBody = ({
   const places = useMemo(() => [
     {
       id: 1,
-      name: "메리어트호텔 전시",
-      category: "전시",
-      image: "/images/exhibition1.jpg",
+      name: "접속하는 몸: 아시아 여성 미술가들",
+      category: "[배리어프리 전시]",
+      image: "/assets/map/barrier_free_art.png",
       position: { lat: 35.146925, lng: 126.840462 }
     },
     {
       id: 2,
-      name: "메리어트호텔 전시",
+      name: "[스포츠강좌이용권 사용]",
       category: "전시",
-      image: "/images/exhibition1.jpg",
-      position: { lat: 35.146925, lng: 126.840462 }
-    },
-    {
-      id: 3,
-      name: "메리어트호텔 전시",
-      category: "전시",
-      image: "/images/exhibition1.jpg",
+      image: "/assets/map/jonglo_sports.png",
       position: { lat: 35.146925, lng: 126.840462 }
     },
     // ... 더 많은 장소 데이터
@@ -79,7 +72,7 @@ const MapBody = ({
     <div className="h-full flex flex-col">
       <FilterButtons />
       {/* 지도 영역 - 고정 */}
-      <div className="relative h-[400px]">
+      <div className="relative h-[420px]">
         <div 
           id="map" 
           className="h-full w-full"
@@ -89,28 +82,31 @@ const MapBody = ({
       {/* 추천 장소 영역 - z-index와 배경색 추가 */}
       <div className="h-[50vh] bg-white flex flex-col relative z-20">
         {/* 제목 - 고정 */}
-        <div className="shrink-0 px-5 py-4 border-b border-gray-100 bg-white sticky top-0 z-10">
-          <h2 className="text-lg font-bold">17개의 추천 장소</h2>
+        <div className="shrink-0 px-5 py-2 bg-white sticky top-0 z-10">
+          <h2 className="text-[0.92644rem] font-bold text-[#5B5B5B] font-pretendard leading-[137.023%]">
+            17개의 추천 장소
+          </h2>
         </div>
         
         {/* 목록 - 스크롤 가능 */}
         <div className="h-full overflow-y-auto">
-          <div className="divide-y divide-gray-100 pb-20">
+          <div className="grid grid-cols-2 gap-4 px-4 pb-20">
             {places.map(place => (
-              <div key={place.id} className="py-4 px-5">
-                <div className="flex items-start space-x-4">
-                  <div className="relative w-16 h-16">
-                    <Image
-                      src={place.image}
-                      alt={place.name}
-                      fill
-                      className="object-cover rounded-sm"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-medium text-gray-900">{place.name}</h3>
-                    <p className="text-sm text-gray-500 mt-1">{place.category}</p>
-                  </div>
+              <div key={place.id} className="bg-white rounded-lg overflow-hidden">
+                {/* 이미지 컨테이너 높이 조정 및 aspect ratio 설정 */}
+                <div className="relative w-full aspect-[4/3]">
+                  <Image
+                    src={place.image}
+                    alt={place.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 430px) 50vw, 200px"
+                  />
+                </div>
+                {/* 텍스트 영역 - 좌측 정렬, 상하 패딩만 적용 */}
+                <div className="py-2">
+                  <h3 className="text-[12px] font-medium text-gray-900 line-clamp-2 text-left">{place.category}</h3>
+                  <p className="text-[12px] text-gray-500 mt-1 text-left">{place.name}</p>
                 </div>
               </div>
             ))}
