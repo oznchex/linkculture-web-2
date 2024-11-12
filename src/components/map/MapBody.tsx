@@ -364,7 +364,7 @@ const MapBody = ({
     },
     {
         "id": 31,
-        "name": "광주문학관(2022년12월예정)",
+        "name": "광주문학관",
         "category": "",
         "label": "전시",
         "image": "/assets/map/ready_for_service.png",
@@ -419,7 +419,7 @@ const MapBody = ({
     },
     {
         "id": 36,
-        "name": "광주서구복합커뮤니티센터(2023년예정)",
+        "name": "광주서구복합커뮤니티센터",
         "category": "",
         "label": "전시",
         "image": "/assets/map/ready_for_service.png",
@@ -452,7 +452,7 @@ const MapBody = ({
     },
     {
         "id": 39,
-        "name": "광주시립수목원(2022년11월예정)",
+        "name": "광주시립수목원",
           "category": "",
         "label": "관광",
         "image": "/assets/map/ready_for_service.png",
@@ -892,7 +892,7 @@ const MapBody = ({
     },
     {
         "id": 79,
-        "name": "김대중컨벤션제2전시장(2023년1월예정)",
+        "name": "김대중컨벤션제2전시장",
           "category": "",
         "label": "전시",
         "image": "/assets/map/ready_for_service.png",
@@ -925,7 +925,7 @@ const MapBody = ({
     },
     {
         "id": 82,
-        "name": "남광주풀잎��화센터",
+        "name": "남광주풀잎화센터",
         "category": "",
         "label": "전시",
         "image": "/assets/map/ready_for_service.png",
@@ -1200,7 +1200,7 @@ const MapBody = ({
     },
     {
         "id": 107,
-        "name": "민주인권평화컴플렉스(2025년예정)",
+        "name": "민주인권평화컴플렉스",
         "category": "",
         "label": "운동",
         "image": "/assets/map/ready_for_service.png",
@@ -1497,7 +1497,7 @@ const MapBody = ({
     },
     {
         "id": 134,
-        "name": "신창동유적선사체험학습관(2022년10월예정)",
+        "name": "신창동유적선사체험학습관",
         "category": "",
         "label": "전시",
         "image": "/assets/map/ready_for_service.png",
@@ -1530,7 +1530,7 @@ const MapBody = ({
     },
     {
         "id": 137,
-        "name": "쌍촌청소년문화의집(2022년12월예정)",
+        "name": "쌍촌청소년문화의집",
         "category": "",
         "label": "전시",
         "image": "/assets/map/ready_for_service.png",
@@ -1915,7 +1915,7 @@ const MapBody = ({
     },
     {
         "id": 172,
-        "name": "조선대학��미술관",
+        "name": "조선대학미술관",
         "category": "",
         "label": "전시",
         "image": "/assets/map/ready_for_service.png",
@@ -2340,12 +2340,12 @@ const MapBody = ({
   onClose={() => setIsModalOpen(false)}
   post={selectedPlace ? {
     id: selectedPlace.id,
-    author: '', // Provide a default or actual value
-    content: selectedPlace.name, // Or another appropriate field
-    time: '', // Provide a default or actual value
+    author: '',
+    content: selectedPlace.name,
+    time: '',
     image: selectedPlace.image
   } : null}
-  message="현재 배리어프리 시설 세부 정보를 등록하고 있어요!" // Pass the message as a prop
+  message="현재 상세 시설 정보는 등록 중이에요!"
 />
     </div>
   );
