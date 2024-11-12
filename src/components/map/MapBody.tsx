@@ -925,7 +925,7 @@ const MapBody = ({
     },
     {
         "id": 82,
-        "name": "남광주풀잎문화센터",
+        "name": "남광주풀잎��화센터",
         "category": "",
         "label": "전시",
         "image": "/assets/map/ready_for_service.png",
@@ -1915,7 +1915,7 @@ const MapBody = ({
     },
     {
         "id": 172,
-        "name": "조선대학교미술관",
+        "name": "조선대학��미술관",
         "category": "",
         "label": "전시",
         "image": "/assets/map/ready_for_service.png",
@@ -2309,6 +2309,9 @@ const MapBody = ({
           <h2 className="text-[0.92644rem] font-bold text-[#5B5B5B] font-pretendard leading-[137.023%]">
             217개의 배리어프리 장소
           </h2>
+          <p className="text-[0.8rem] text-gray-400">
+            한국문화정보원_전국 배리어프리 문화예술관광지 공공데이터
+          </p>
         </div>
         
         {/* 목록 - 스크롤 가능 */}
