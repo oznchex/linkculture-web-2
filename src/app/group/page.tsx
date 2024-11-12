@@ -6,7 +6,7 @@ import HomeFooter from '@/components/home/HomeFooter';
 
 export default function CommunityPage() {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="flex flex-col h-screen overflow-hidden">
       <HomeHeader />
       <main className="flex-1 overflow-hidden">
         <GroupBody />

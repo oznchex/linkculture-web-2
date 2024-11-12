@@ -10,7 +10,7 @@ const menuItems = [
   { path: '/scrap', label: '스크랩', icon: '/assets/footer/scrap.svg', activeIcon: '/assets/footer/scrap-active.svg' },
   { path: '/home', label: '홈', icon: '/assets/footer/home.svg', activeIcon: '/assets/footer/home-active.svg' },
   { path: '/community', label: '커뮤니티', icon: '/assets/footer/community.svg', activeIcon: '/assets/footer/community-active.svg' },
-  { path: '/group', label: '그룹', icon: '/assets/footer/group.svg', activeIcon: '/assets/footer/group-active.svg' },
+  { path: '/group', label: '모임', icon: '/assets/footer/group.svg', activeIcon: '/assets/footer/group-active.svg' },
 ];
 
 export default function HomeFooter() {
