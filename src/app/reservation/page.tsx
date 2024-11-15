@@ -1,4 +1,4 @@
-import ReservationBody from './components/ReservationBody';
+import ReservationBody from '../../components/reservation/ReservationBody';
 
 export default function ReservationPage() {
   return (

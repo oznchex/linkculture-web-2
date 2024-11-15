@@ -927,7 +927,7 @@ const MapBody = ({
         "id": 82,
         "name": "남광주풀잎화센터",
         "category": "",
-        "label": "공연",
+        "label": "관광",
         "image": "/assets/map/ready_for_service.png",
         "position": {
             "lat": 35.13688772,
